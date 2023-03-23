@@ -29,7 +29,14 @@ namespace ogrenciKayit.Controllers
 
         public IActionResult Ekle()
         {
-            ViewBag.isim = isim;    
+            //ViewBag.isim = isim;    
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Ekle(string txt_ad,string txt_soyad,string txt_numara,string txt_sinif)
+        {
+            //ViewBag.isim = isim;    
             return View();
         }
     }

@@ -1,1 +1,26 @@
-﻿<h2>@ViewBag.isim isimli öğrenci ekleniyor.</h2>
+﻿<form method="post">
+    <div class="container w-25">
+        <div class="row mb-6 alert alert-primary justify-content-center">Öğrenci Ekleme sayfasıdır</div>
+        <div class="row mb-3">
+            Ad:<input class="form-control" style="text" name="txt_ad" />
+        </div>
+        <div class="row mb-3">
+            Soyad:<input class="form-control" style="text" name="txt_soyad" />
+        </div>
+        <div class="row mb-3">
+            Numara:<input class="form-control" style="number" name="txt_numara" />
+        </div>
+        <div class="row mb-3">
+            Sınıf:<input class="form-control" style="drop-down" name="txt_sinif" />
+        </div>
+        <div class="row mb-3">
+            <div class="col">
+                <button class="form-control bg-success" style="submit">Kaydet</button>
+            </div>
+            <div class="col">
+                <button class="form-control bg-danger" style="">İptal</button>
+
+            </div>
+        </div>
+    </div>
+</form>
