@@ -27,7 +27,7 @@ namespace ogrenciKayit.Controllers
             return View();
         }
 
-        public IActionResult Ekle(string isim)
+        public IActionResult Ekle()
         {
             ViewBag.isim = isim;    
             return View();
