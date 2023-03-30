@@ -1,5 +1,7 @@
 ﻿<h1> Burası Index sayfası</h1>
 
+<a class="btn btn-success" href="/ogrenci/ekle">Yeni Öğrenci</a>
+
 <table class="table table-hover">
     <thead>
         <tr>
@@ -7,22 +9,23 @@
             <th scope="col">Adı</th>
             <th scope="col">Soyadı</th>
             <th scope="col">Numara</th>
+            <th scope="col">Sınıf</th>
         </tr>
     </thead>
-    <tbody class="bg-dark">
+    <tbody class="bg-info">
+        @{
+            int siraNo = 1;
+        }
 
-        @*@foreach (var item in ViewBag.Adlar)*@
-
-        @for (int i = 0; i < ((List<string>)ViewBag.Adlar).Count(); i++)
+        @foreach (DB_ogrenci ogrenci in ViewBag.ogrenciListesi)
         {
-            <tr style=@(ViewBag.id==(i+1)?"color:red":"color:lime")>
-                <th scope="row">@(i+1)</th>
-                <td>@ViewBag.Adlar[i]</td>
-                <td>@ViewBag.Soyadlar[i]</td>
-                <td></td>
+            <tr>
+                <td>@(siraNo++)</td>
+                <td>@ogrenci.Ad</td>
+                <td>@ogrenci.Soyad</td>
+                <td>@ogrenci.Numara</td>
+                <td>@ogrenci.Sinif</td>
             </tr>
         }
-        
-        
     </tbody>
 </table>
