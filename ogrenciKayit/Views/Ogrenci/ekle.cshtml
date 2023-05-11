@@ -1,17 +1,35 @@
-﻿<form method="post">
+﻿
+<form method="post">
     <div class="container w-25">
         <div class="row mb-6 alert alert-primary justify-content-center">Öğrenci Ekleme sayfasıdır</div>
         <div class="row mb-3">
-            Ad:<input class="form-control" type="text" name="ad" />
+            Ad:<input class="form-control" type="text" name="Ad" />
         </div>
         <div class="row mb-3">
-            Soyad:<input class="form-control" type="text" name="soyad" />
+            Soyad:<input class="form-control" type="text" name="Soyad" />
         </div>
         <div class="row mb-3">
-            Numara:<input class="form-control" type="number" name="numara" />
+            Numara:<input class="form-control" type="number" name="Numara" />
         </div>
         <div class="row mb-3">
-            Sınıf:<input class="form-control" type="text" name="sinif" />
+            Sınıf:
+            <select class="form-select" aria-label="Default select example" name="Sinif">
+                <option selected disabled>Sınıf seçimi yapınız..</option>
+                @foreach (string item in ViewBag.siniflar)
+                {
+                    <option value=@item>@item</option>
+                }
+            </select>
+        </div>
+        <div class="row mb-3">
+            Bölüm:
+            <select class="form-select" aria-label="Default select example" name="Bolum">
+                <option selected hidden>Bölüm seçimi yapınız..</option>
+                @foreach (string item in ViewBag.bolumler)
+                {
+                    <option value=@item>@item</option>
+                }
+            </select>
         </div>
         <div class="row mb-3">
             <div class="col">
